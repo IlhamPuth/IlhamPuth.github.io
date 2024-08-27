@@ -1,1 +1,1 @@
-const currentPage = document.querySelectorAll
+const leftAbout = document.querySelector("#leftAbout")

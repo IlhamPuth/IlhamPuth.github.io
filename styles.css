@@ -1,20 +1,25 @@
-*{
+:root{
 	--primary-bg-color: rgb(238, 238, 238);
 	--primary-font-color: rgb(36, 36, 36);
 	--secondary-font-color: rgb(85, 85, 85);
+	--accent-font-color: rgb(255, 255, 255);
+	--accent-color: rgb(236, 33, 33);
 	--primary-title-size: 1.2em;
 	--primary-font-size: 1em;
+}
+*{
 	margin: 0;
 	padding: 0;
 	font-family: Inter,Verdana, Geneva, Tahoma;
 	scroll-behavior: smooth;
 }
 body{
+	margin: 0;
 	background-color: var(--primary-bg-color);
 	color: var(--primary-font-color);
 }
 #navBar{
-	position:sticky;
+	position:fixed;
 	width: 100dvw;
 	height: 7dvh;
 	top: 0;
@@ -58,10 +63,10 @@ body{
 	margin-right: 1rem;
 }
 .container{
-	background: no-repeat center / cover url(assets/backgroundInProgress.png);
 	padding-top: 7vh;
 	width: 100dvw;
 	height: 100dvh;
+	filter: none;
 }
 #Hero{
 	display: flex;
@@ -82,16 +87,38 @@ body{
 		color: var(--secondary-font-color);
 	}
 }
+#About{
+	display: flex;
+}
+#leftAbout{
+	padding: 0 4em;
+	padding-top: 5dvh;
+	flex: .3;
+	transform: translateX(-100%);
+	& h1{
+		margin-bottom: 2rem;
+	}
+	& article{
+	}
+	& h3 {
+		display: inline-block;
+	}
+}
 /* Utilities */
 .darkmode{
-	filter: invert();
-	background-color: rgb(48, 48, 48);
+	--primary-bg-color: rgb(49, 49, 49);
+	--primary-font-color: rgb(250, 250, 250);
+	--secondary-font-color: rgb(206, 206, 206);
+	& #menuButton{
+		filter: invert();
+	}
 }
 .buttonDefault{
 	font-size: var(--primary-font-size);
-	color: var(--primary-font-color);
+	color: var(--accent-font-color);
+	background-color: var(--accent-color);
 	font-weight: bold;
-	border: 1px solid rgb(41, 41, 41);
+	border: 0px solid rgb(255, 255, 255);
 	border-radius: 1em;
 	width: 10rem;
 	height: 2.5em;
@@ -102,8 +129,5 @@ body{
 	}
 	#menuButton{
 		display: inline;
-	}
-	.container{
-		background: no-repeat center / cover url(assets/backgroundInProgress.png);
 	}
 }
