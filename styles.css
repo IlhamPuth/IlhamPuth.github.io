@@ -94,11 +94,8 @@ body{
 	padding: 0 4em;
 	padding-top: 5dvh;
 	flex: .3;
-	transform: translateX(-100%);
 	& h1{
 		margin-bottom: 2rem;
-	}
-	& article{
 	}
 	& h3 {
 		display: inline-block;
